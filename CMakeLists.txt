@@ -2,6 +2,9 @@
 cmake_minimum_required(VERSION 3.1.0)
 project(librealsense2 LANGUAGES CXX C)
 
+string(REPLACE "/EHsc" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHa")
+
 include(CMake/lrs_options.cmake)
 include(CMake/connectivity_check.cmake)
 
